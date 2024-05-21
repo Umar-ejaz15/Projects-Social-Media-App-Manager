@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
-
+void WellCome()
+{
+    cout << "Wellcome To Social Media App Maneger";
+}
 class Users
 {
 private:
@@ -9,7 +12,7 @@ private:
 public:
     string Email;
     string userName;
-    int phoneNumber;
+
     void setPassword(string myPass)
     {
         Password = myPass;
@@ -18,34 +21,34 @@ public:
     {
         return Password;
     }
-    Users(string myEmail, string myUserName, int myPhoneNumber, string myPass)
+    Users()
     {
-        Password = myPass;
-        Email = myEmail;
-        userName = myUserName;
-        phoneNumber = myPhoneNumber;
-        cout << Email << " " << userName << " " << phoneNumber << " " <<getPassword();
+        cout<<"Create A Profile"<<endl;
+    
+        cout<<"Enter Your Email: ";cin>>Email;
+        cout<<"Enter Your UserName: ";cin>>userName;
+        cout<<"Enter Your Password: ";cin>>Password;
+
     }
 };
-class Posts:public Users
+class Posts : public Users
 
 {
-    public: 
+public:
     string sharePosts;
 };
 
-class Messages:public Users
+class Messages : public Users
 {
 };
 
-class Comments:public Users
+class Comments : public Users
 {
 };
 int main()
 {
-    Users user1("ui737773@gmail.com", "umar", 300812821, "Uma28");
-    Users user2("ui737773@gmail.com", "okasha", 300812821, "Uma28");
-
+    WellCome();
+    Users user1;
 
     return 0;
 }
